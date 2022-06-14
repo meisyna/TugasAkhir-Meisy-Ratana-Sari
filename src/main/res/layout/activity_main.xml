@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <!--mengatur tampilan ImageView-->
+    <ImageView
+        android:id="@+id/iv_result"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_take"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text"
+        app:layout_constraintVertical_bias="0.552"
+        app:srcCompat="@drawable/ic_baseline_photo_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!--membuat text field agar dapat menambahkan text dan mengedit text-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Text">
+
+        <EditText
+            android:id="@+id/textEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--membuat tombol Share Text-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shareTextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Text"
+        android:layout_marginTop="20dp"/>
+
+    <!--membuat tombol Share Image-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shareImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Image"/>
+
+    <!--membuat tombol Share Image dan Text-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shareBothBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Image &amp; Text"/>
+
+    <!--membuat tombol Take Picture-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_take"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickTake"
+        android:text="Take Picture"/>
+</LinearLayout>
